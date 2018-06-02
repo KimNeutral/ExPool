@@ -32,7 +32,9 @@ namespace ExPool.Pages
 
         private void btnPassenger_Click(object sender, RoutedEventArgs e)
         {
-            App.stack.Add(new AddPassengerPage());
+            App.pageswitch = false;
+            App.stack.Add(new HomePage());
+
         }
 
         private void Card_MouseUp(object sender, MouseButtonEventArgs e)
