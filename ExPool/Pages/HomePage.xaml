@@ -46,14 +46,18 @@
                             HorizontalAlignment="Right" VerticalAlignment="Bottom"
                             Margin="32" Grid.Row="1">
                 <StackPanel>
-                    <Button ToolTip="드라이버"
+                    <Button x:Name="btnDriver"
+                            ToolTip="드라이버"
                             Background="{DynamicResource PrimaryHueMidBrush}"
-                            Foreground="{DynamicResource PrimaryHueMidForegroundBrush}">
+                            Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                            Click="btnDriver_Click">
                         <materialDesign:PackIcon Kind="Bus" Height="20" Width="20" />
                     </Button>
-                    <Button ToolTip="히치하이커"
+                    <Button x:Name="btnPassenger"
+                            ToolTip="히치하이커"
                             Background="{DynamicResource PrimaryHueMidBrush}"
-                            Foreground="{DynamicResource PrimaryHueMidForegroundBrush}">
+                            Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                            Click="btnPassenger_Click">
                         <materialDesign:PackIcon Kind="HumanHandsup" />
                     </Button>
                 </StackPanel>
