@@ -23,6 +23,7 @@ namespace ExPool.Pages
         public LookUpPage()
         {
             InitializeComponent();
+            App.pageswitch = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
