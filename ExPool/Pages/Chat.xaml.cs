@@ -10,31 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Winsdows.Shapes;
 
 namespace ExPool.Pages
 {
     /// <summary>
-    /// Interaction logic for LookUpPage.xaml
+    /// Chat.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class LookUpPage : Page
+    public partial class Chat : Window
     {
-        public LookUpPage()
+        public Chat()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText("01012345678");
-            MessageBox.Show("전화번호가 복사되었습니다.","System");
+            ChatRecord.Items.Add(newChat.Text);
+            newChat.Text = null;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void newChat_KeyDown(object sender, KeyEventArgs e)
         {
-            var chat = new Chat();
-            chat.Show();
+            if(e.Key==Key.Return)
+            {
+                ChatRecord.Items.Add(newChat.Text);
+                newChat.Text = null;
+            }
         }
     }
 }

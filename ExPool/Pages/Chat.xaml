@@ -1,0 +1,28 @@
+﻿<Window x:Class="ExPool.Pages.Chat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExPool.Pages"
+        mc:Ignorable="d"
+        Title="Chat" Height="700" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                  Name="ChatRecord" FontSize="20">
+            <ListViewItem>adfjl;</ListViewItem>
+        </ListView>
+        <TextBox Grid.Column="0" Grid.Row="1" FontSize="20" Name="newChat"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" KeyDown="newChat_KeyDown"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="입력" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Margin="20" Click="Button_Click"/>
+    </Grid>
+</Window>
