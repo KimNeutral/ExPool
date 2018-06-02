@@ -4,118 +4,129 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExPool"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="ApplicationDriver" Height="500" Width="350">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="86"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="3*"/>
-        </Grid.ColumnDefinitions>
+        <materialDesign:ColorZone Padding="6"
+                                  Background="#2295F3"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                      DockPanel.Dock="Top">
+            <Grid Margin="16 12 12 12">
+                <TextBlock Text="ExPool" Margin="1,0,0,0" 
+                           FontSize="25" FontWeight="SemiBold"
+                           Foreground="White"/>
+            </Grid>
+        </materialDesign:ColorZone>
 
-        <Label Grid.Row="0" Grid.Column="0"
-               Content="운동" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ComboBox Grid.Row="0" Grid.Column="1">
-            <ComboBoxItem>축구</ComboBoxItem>
-            <ComboBoxItem>농구</ComboBoxItem>
-            <ComboBoxItem>탁구</ComboBoxItem>
-            <ComboBoxItem>배드민턴</ComboBoxItem>
-        </ComboBox>
+        <materialDesign:Card Grid.Row="1" Padding="16" Margin="8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <ComboBox Grid.Row="0" Grid.Column="1" 
+                          materialDesign:HintAssist.Hint="운동">
+                    <ComboBoxItem>축구</ComboBoxItem>
+                    <ComboBoxItem>농구</ComboBoxItem>
+                    <ComboBoxItem>탁구</ComboBoxItem>
+                    <ComboBoxItem>배드민턴</ComboBoxItem>
+                </ComboBox>
 
-        <Label Grid.Row="1" Grid.Column="0"
-               Content="시간" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ComboBox Grid.Row="1" Grid.Column="1">
-            <ComboBoxItem>00:00</ComboBoxItem>
-            <ComboBoxItem>01:00</ComboBoxItem>
-            <ComboBoxItem>02:00</ComboBoxItem>
-            <ComboBoxItem>03:00</ComboBoxItem>
-            <ComboBoxItem>04:00</ComboBoxItem>
-            <ComboBoxItem>05:00</ComboBoxItem>
-            <ComboBoxItem>06:00</ComboBoxItem>
-            <ComboBoxItem>07:00</ComboBoxItem>
-            <ComboBoxItem>08:00</ComboBoxItem>
-            <ComboBoxItem>09:00</ComboBoxItem>
-            <ComboBoxItem>10:00</ComboBoxItem>
-            <ComboBoxItem>11:00</ComboBoxItem>
-            <ComboBoxItem>12:00</ComboBoxItem>
-            <ComboBoxItem>13:00</ComboBoxItem>
-            <ComboBoxItem>14:00</ComboBoxItem>
-            <ComboBoxItem>15:00</ComboBoxItem>
-            <ComboBoxItem>16:00</ComboBoxItem>
-            <ComboBoxItem>17:00</ComboBoxItem>
-            <ComboBoxItem>18:00</ComboBoxItem>
-            <ComboBoxItem>19:00</ComboBoxItem>
-            <ComboBoxItem>20:00</ComboBoxItem>
-            <ComboBoxItem>21:00</ComboBoxItem>
-            <ComboBoxItem>22:00</ComboBoxItem>
-            <ComboBoxItem>23:00</ComboBoxItem>
-        </ComboBox>
+                <ComboBox Grid.Row="1" Grid.Column="1"
+                           materialDesign:HintAssist.Hint="시간대">
+                    <ComboBoxItem>00:00</ComboBoxItem>
+                    <ComboBoxItem>01:00</ComboBoxItem>
+                    <ComboBoxItem>02:00</ComboBoxItem>
+                    <ComboBoxItem>03:00</ComboBoxItem>
+                    <ComboBoxItem>04:00</ComboBoxItem>
+                    <ComboBoxItem>05:00</ComboBoxItem>
+                    <ComboBoxItem>06:00</ComboBoxItem>
+                    <ComboBoxItem>07:00</ComboBoxItem>
+                    <ComboBoxItem>08:00</ComboBoxItem>
+                    <ComboBoxItem>09:00</ComboBoxItem>
+                    <ComboBoxItem>10:00</ComboBoxItem>
+                    <ComboBoxItem>11:00</ComboBoxItem>
+                    <ComboBoxItem>12:00</ComboBoxItem>
+                    <ComboBoxItem>13:00</ComboBoxItem>
+                    <ComboBoxItem>14:00</ComboBoxItem>
+                    <ComboBoxItem>15:00</ComboBoxItem>
+                    <ComboBoxItem>16:00</ComboBoxItem>
+                    <ComboBoxItem>17:00</ComboBoxItem>
+                    <ComboBoxItem>18:00</ComboBoxItem>
+                    <ComboBoxItem>19:00</ComboBoxItem>
+                    <ComboBoxItem>20:00</ComboBoxItem>
+                    <ComboBoxItem>21:00</ComboBoxItem>
+                    <ComboBoxItem>22:00</ComboBoxItem>
+                    <ComboBoxItem>23:00</ComboBoxItem>
+                </ComboBox>
 
-        <Label Grid.Row="2" Grid.Column="0"
-               Content="출발 위치" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ComboBox Grid.Row="2" Grid.Column="1"
-                  Name="StartBact" SelectionChanged="StartBact_SelectionChanged">
-            <ComboBoxItem>서울특별시</ComboBoxItem>
-            <ComboBoxItem>부산광역시</ComboBoxItem>
-            <ComboBoxItem>인천광역시</ComboBoxItem>
-            <ComboBoxItem>대구광역시</ComboBoxItem>
-            <ComboBoxItem>광주광역시</ComboBoxItem>
-            <ComboBoxItem>대전광역시</ComboBoxItem>
-            <ComboBoxItem>울산광역시</ComboBoxItem>
-            <ComboBoxItem>세종특별자치시</ComboBoxItem>
-            <ComboBoxItem>경기도</ComboBoxItem>
-            <ComboBoxItem>강원도</ComboBoxItem>
-            <ComboBoxItem>충청북도</ComboBoxItem>
-            <ComboBoxItem>충청남도</ComboBoxItem>
-            <ComboBoxItem>전라북도</ComboBoxItem>
-            <ComboBoxItem>전라남도</ComboBoxItem>
-            <ComboBoxItem>경상북도</ComboBoxItem>
-            <ComboBoxItem>경상남도</ComboBoxItem>
-            <ComboBoxItem>제주특별자치도</ComboBoxItem>
-        </ComboBox>
-        <ComboBox Grid.Row="3" Grid.Column="1"
-                  Name="StartMact"/>
+                <ComboBox Grid.Row="2" Grid.Column="1"
+                           materialDesign:HintAssist.Hint="출발 시도"
+                           Name="StartBact" SelectionChanged="StartBact_SelectionChanged">
+                    <ComboBoxItem>서울특별시</ComboBoxItem>
+                    <ComboBoxItem>부산광역시</ComboBoxItem>
+                    <ComboBoxItem>인천광역시</ComboBoxItem>
+                    <ComboBoxItem>대구광역시</ComboBoxItem>
+                    <ComboBoxItem>광주광역시</ComboBoxItem>
+                    <ComboBoxItem>대전광역시</ComboBoxItem>
+                    <ComboBoxItem>울산광역시</ComboBoxItem>
+                    <ComboBoxItem>세종특별자치시</ComboBoxItem>
+                    <ComboBoxItem>경기도</ComboBoxItem>
+                    <ComboBoxItem>강원도</ComboBoxItem>
+                    <ComboBoxItem>충청북도</ComboBoxItem>
+                    <ComboBoxItem>충청남도</ComboBoxItem>
+                    <ComboBoxItem>전라북도</ComboBoxItem>
+                    <ComboBoxItem>전라남도</ComboBoxItem>
+                    <ComboBoxItem>경상북도</ComboBoxItem>
+                    <ComboBoxItem>경상남도</ComboBoxItem>
+                    <ComboBoxItem>제주특별자치도</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Grid.Row="3" Grid.Column="1"
+                          materialDesign:HintAssist.Hint="출발 구"
+                          Name="StartMact"/>
 
-        <Label Grid.Row="4" Grid.Column="0"
-               Content="운동 위치" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ComboBox Grid.Row="4" Grid.Column="1"
-                  Name="ExerciseBact" SelectionChanged="ExerciseBact_SelectionChanged">
-            <ComboBoxItem>서울특별시</ComboBoxItem>
-            <ComboBoxItem>부산광역시</ComboBoxItem>
-            <ComboBoxItem>인천광역시</ComboBoxItem>
-            <ComboBoxItem>대구광역시</ComboBoxItem>
-            <ComboBoxItem>광주광역시</ComboBoxItem>
-            <ComboBoxItem>대전광역시</ComboBoxItem>
-            <ComboBoxItem>울산광역시</ComboBoxItem>
-            <ComboBoxItem>세종특별자치시</ComboBoxItem>
-            <ComboBoxItem>경기도</ComboBoxItem>
-            <ComboBoxItem>강원도</ComboBoxItem>
-            <ComboBoxItem>충청북도</ComboBoxItem>
-            <ComboBoxItem>충청남도</ComboBoxItem>
-            <ComboBoxItem>전라북도</ComboBoxItem>
-            <ComboBoxItem>전라남도</ComboBoxItem>
-            <ComboBoxItem>경상북도</ComboBoxItem>
-            <ComboBoxItem>경상남도</ComboBoxItem>
-            <ComboBoxItem>제주특별자치도</ComboBoxItem>
-        </ComboBox>
-        <ComboBox Grid.Row="5" Grid.Column="1"
-                  Name="ExerciseMact"/>
+                <ComboBox Grid.Row="4"
+                          materialDesign:HintAssist.Hint="운동 시도"
+                          Name="ExerciseBact" SelectionChanged="ExerciseBact_SelectionChanged" HorizontalAlignment="Left" Width="281">
+                    <ComboBoxItem>서울특별시</ComboBoxItem>
+                    <ComboBoxItem>부산광역시</ComboBoxItem>
+                    <ComboBoxItem>인천광역시</ComboBoxItem>
+                    <ComboBoxItem>대구광역시</ComboBoxItem>
+                    <ComboBoxItem>광주광역시</ComboBoxItem>
+                    <ComboBoxItem>대전광역시</ComboBoxItem>
+                    <ComboBoxItem>울산광역시</ComboBoxItem>
+                    <ComboBoxItem>세종특별자치시</ComboBoxItem>
+                    <ComboBoxItem>경기도</ComboBoxItem>
+                    <ComboBoxItem>강원도</ComboBoxItem>
+                    <ComboBoxItem>충청북도</ComboBoxItem>
+                    <ComboBoxItem>충청남도</ComboBoxItem>
+                    <ComboBoxItem>전라북도</ComboBoxItem>
+                    <ComboBoxItem>전라남도</ComboBoxItem>
+                    <ComboBoxItem>경상북도</ComboBoxItem>
+                    <ComboBoxItem>경상남도</ComboBoxItem>
+                    <ComboBoxItem>제주특별자치도</ComboBoxItem>
+                </ComboBox>
+                <ComboBox Grid.Row="5" Grid.Column="1"
+                          materialDesign:HintAssist.Hint="운동 구"
+                          Name="ExerciseMact"/>
 
-        <Label Grid.Row="6" Grid.Column="0"
-               Content="코멘드" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="6" Grid.Column="1"/>
+                <TextBox Grid.Row="6" Grid.Column="1"
+                         materialDesign:HintAssist.Hint="코멘트"/>
+
+                <Button Grid.Row="7" Content="등록" Margin="0 10 0 0"/>
+            </Grid>
+        </materialDesign:Card>
+
     </Grid>
 </Window>
