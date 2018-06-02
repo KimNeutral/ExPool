@@ -88,10 +88,6 @@
     <Compile Include="UserProfileClass\Despartment.cs" />
     <Compile Include="UserProfileClass\Member.cs" />
     <Compile Include="UserProfileClass\MemberViewModel.cs" />
-    <Page Include="ApplicationDriver.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ApplicationFirst.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
