@@ -4,31 +4,66 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExPool"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="350">
+        Title="MainWindow" Height="700" Width="500"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- note you only need bring in these extra resource dictionaries when using non-default styles, so only bring them into your controls where the default style is not what you want -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Slider.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition  Height="2*"/>
-            <RowDefinition  Height="1.5*"/>
-            <RowDefinition  Height="1.5*"/>
-            <RowDefinition  Height="2*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="0.3*"/>
+                <RowDefinition  Height="0.7*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#2295F3">
 
-        <Label Content="ExPool" Grid.Row="0" Grid.ColumnSpan="2"
-               FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="0" Margin="30"
-                 TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
-        <PasswordBox Grid.Row="2" Grid.Column="0" Margin="30"
-                  FontSize="20"/>
-        <Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Content="확인"
-                Click="Button_Click" Margin="20,70,20,70"/>
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="회원가입"
-                Margin="40"/>
+            </Grid>
+            <Grid Grid.Row="1" Background="#EDE7F6">
+
+            </Grid>
+        </Grid>
+
+        <materialDesign:Card Width="350" Height="350" Padding="32" Margin="16" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="30">ExPool</TextBlock>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBox Grid.Row="0" Grid.Column="0"
+                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="ID"/>
+                    <PasswordBox Grid.Row="1" Grid.Column="0"
+                        FontSize="15" materialDesign:HintAssist.Hint="Password"/>
+                </Grid>
+
+                <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                    <Button Content="로그인"
+                        Click="Button_Click"/>
+                    <Button Style="{DynamicResource MaterialDesignFlatButton}" Grid.Column="0" Grid.ColumnSpan="2" Content="회원가입"
+                        Margin="0 10 0 0"/>
+                </StackPanel>
+                
+            </Grid>
+        </materialDesign:Card>
+
     </Grid>
     
 </Window>
