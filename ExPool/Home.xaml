@@ -8,43 +8,72 @@
         mc:Ignorable="d"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Home" Height="600" Width="400"
-        WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="86"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <materialDesign:ColorZone Padding="6"
-                                  Background="#2295F3"
-                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                      DockPanel.Dock="Top">
-            <Grid Margin="16 12 12 12">
-                <TextBlock Text="ExPool" Margin="1,0,0,0" 
-                           FontSize="25" FontWeight="SemiBold"
-                           Foreground="White"/>
-            </Grid>
-        </materialDesign:ColorZone>
-        <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock FontSize="15"
-                   VerticalAlignment="Center" Text="야구/송파구"/>
-                <Grid Grid.Column="1" HorizontalAlignment="Right">
-                    <TextBlock FontSize="15" Grid.Column="1"
-                               VerticalAlignment="Center" Text="진행중"
-                               Foreground="DodgerBlue"/>
-                </Grid>
-            </Grid>
-        </materialDesign:Card>
+        Title="Home" Height="700" Width="400"
+        WindowStartupLocation="CenterScreen"       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
-        <Grid Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"
-              Margin="30">
-            <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" FocusVisualStyle="{x:Null}"
-                    Content="&#x26DF;" Foreground="White" FontSize="30" HorizontalAlignment="Right"/>
-        </Grid>
-    </Grid>
+    <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="212">
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                                    DockPanel.Dock="Top"
+                                    HorizontalAlignment="Right" Margin="16"
+                                    IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
+                    <ListBox x:Name="DemoItemsListBox" Margin="0 16 0 16" SelectedIndex="0"                         
+                             ItemsSource="{Binding DemoItems}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="domain:DemoItem">
+                                <TextBlock Text="{Binding Name}" Margin="32 0 32 0" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top">
+                    <DockPanel>
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                        x:Name="MenuToggleButton"/>
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="15 0 0 0">ExPool</TextBlock>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <Grid>
+                    <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="15"
+                                       VerticalAlignment="Center" Text="야구/송파구"/>
+                            <Grid Grid.Column="1" HorizontalAlignment="Right">
+                                <TextBlock FontSize="15" Grid.Column="1"
+                                           VerticalAlignment="Center" Text="진행중"
+                                           Foreground="DodgerBlue"/>
+                            </Grid>
+                        </Grid>
+                    </materialDesign:Card>
+                    <Grid Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                          Margin="30">
+                        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" FocusVisualStyle="{x:Null}"
+                                Content="&#x26DF;" Foreground="White" FontSize="30" HorizontalAlignment="Right"/>
+                    </Grid>
+                </Grid>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
 </Window>
