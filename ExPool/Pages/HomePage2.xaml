@@ -1,0 +1,68 @@
+﻿<Page x:Class="ExPool.Pages.HomePage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExPool.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="400"
+      Title="HomePage"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal" 
+      TextOptions.TextRenderingMode="Auto">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top"
+                             MouseUp="Card_MouseUp">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="15"
+                                       VerticalAlignment="Center" Text="야구/송파구"/>
+                <Grid Grid.Column="1" HorizontalAlignment="Right">
+                    <TextBlock FontSize="15" Grid.Column="1"
+                                           VerticalAlignment="Center" Text="매칭완료!"
+                                           Foreground="DodgerBlue"/>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+        <Grid Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            Margin="32" Grid.Row="1">
+                <StackPanel>
+                    <Button x:Name="btnDriver"
+                            ToolTip="드라이버"
+                            Background="{DynamicResource PrimaryHueMidBrush}"
+                            Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                            Click="btnDriver_Click">
+                        <materialDesign:PackIcon Kind="Bus" Height="20" Width="20" />
+                    </Button>
+                    <Button x:Name="btnPassenger"
+                            ToolTip="나가기"
+                            Background="Red"
+                            Foreground=""
+                            Click="btnPassenger_Click">
+                        <materialDesign:PackIcon Kind="HumanHandsup" />
+                    </Button>
+                </StackPanel>
+            </materialDesign:PopupBox>
+        </Grid>
+    </Grid>
+</Page>

@@ -79,6 +79,9 @@
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\HomePage2.xaml.cs">
+      <DependentUpon>HomePage2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LookUpPage.xaml.cs">
       <DependentUpon>LookUpPage.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HomePage2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\door2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
