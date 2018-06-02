@@ -32,7 +32,7 @@ namespace ExPool.Pages
 
         private void btnPassenger_Click(object sender, RoutedEventArgs e)
         {
-
+            App.stack.Add(new AddPassengerPage());
         }
     }
 }
