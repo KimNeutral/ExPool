@@ -55,6 +55,14 @@ namespace ExPool
             _home.tbtnBack.Visibility = stack.Count != 1 ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
         }
 
+        public void ShowCard()
+        {
+            if (stack.Count == 1)
+            {
+                ((HomePage)stack.Peek()).Card.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged(string propertyName) => PropertyChanged?.Invoke(null, new PropertyChangedEventArgs(propertyName));
     }

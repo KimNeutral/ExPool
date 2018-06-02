@@ -63,6 +63,7 @@ namespace ExPool.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             App.stack.Pop();
+            App.stack.ShowCard();
         }
     }
 }
