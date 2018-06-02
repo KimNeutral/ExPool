@@ -1,0 +1,37 @@
+﻿<Window x:Class="ExPool.ApplicationDriver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExPool"
+        mc:Ignorable="d"
+        Title="ApplicationDriver" Height="500" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Content="운동" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="0" Grid.Column="1">
+            <ComboBoxItem>축구</ComboBoxItem>
+            <ComboBoxItem>농구</ComboBoxItem>
+            <ComboBoxItem>탁구</ComboBoxItem>
+            <ComboBoxItem>배드민턴</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

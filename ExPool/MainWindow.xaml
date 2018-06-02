@@ -21,10 +21,10 @@
         <TextBlock Text="ExPool" Grid.Row="0" Grid.ColumnSpan="2"
                FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"
                VerticalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="0" Margin="30" Text="아이디"
+        <TextBox Grid.Row="1" Grid.Column="0" Margin="30"
                  TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
-        <TextBox Grid.Row="2" Grid.Column="0" Margin="30" Text="비밀번호"
-                 TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
+        <PasswordBox Grid.Row="2" Grid.Column="0" Margin="30"
+                  FontSize="20"/>
         <Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Content="확인"
                 Click="Button_Click" Margin="20,70,20,70"/>
         <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="회원가입"
