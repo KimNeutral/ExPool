@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace ExPool
 {
@@ -13,6 +14,8 @@ namespace ExPool
     {
         private Stack<Page> stack = new Stack<Page>();
         private Home _home;
+
+        private DispatcherTimer timer = new DispatcherTimer();
 
         private Page currentPage;
         public Page CurrentPage
@@ -60,6 +63,26 @@ namespace ExPool
             if (stack.Count == 1)
             {
                 ((HomePage)stack.Peek()).Card.Visibility = System.Windows.Visibility.Visible;
+                StartTimer();
+            }
+        }
+
+        private void StartTimer()
+        {
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        int ct = 0;
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if(ct ++ == 5)
+            {
+                stack.Pop();
+                stack.Push(new HomePage2());
+                timer.Stop();
+                SetCurrentPage();
             }
         }
 

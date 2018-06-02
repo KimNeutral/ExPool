@@ -34,7 +34,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock FontSize="15"
-                                       VerticalAlignment="Center" Text="야구/송파구"/>
+                                       VerticalAlignment="Center" Text="농구/강북구"/>
                 <Grid Grid.Column="1" HorizontalAlignment="Right">
                     <TextBlock FontSize="15" Grid.Column="1"
                                            VerticalAlignment="Center" Text="매칭중"
