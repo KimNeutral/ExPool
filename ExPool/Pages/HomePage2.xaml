@@ -57,12 +57,15 @@
                     <Button x:Name="btnPassenger"
                             ToolTip="나가기"
                             Background="Red"
-                            Foreground=""
                             Click="btnPassenger_Click">
+                        <Button.Foreground>
+                            <ImageBrush ImageSource="/Image/door2.png"></ImageBrush>
+                        </Button.Foreground>
                         <materialDesign:PackIcon Kind="HumanHandsup" />
                     </Button>
                 </StackPanel>
             </materialDesign:PopupBox>
         </Grid>
+        <Image Source="/Image/black.png" Margin="148,-52,126,532" RenderTransformOrigin="0.5,0.5"/>
     </Grid>
 </Page>
