@@ -38,6 +38,10 @@ namespace ExPool
             IRestResponse response = client.Execute(request);
             var content = response.Content;
             MessageBox.Show(content);*/
+
+            var home = new Home();
+            home.Show();
+            this.Close();
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
