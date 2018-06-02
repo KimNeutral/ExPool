@@ -17,7 +17,6 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -39,5 +38,30 @@
                VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <ComboBox Grid.Row="1" Grid.Column="1">
         </ComboBox>
+
+        <Label Grid.Row="2" Grid.Column="0"
+               Content="출발 위치" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="2" Grid.Column="1"
+                  Name="StartBact"/>
+        <ComboBox Grid.Row="3" Grid.Column="1"
+                  Name="StartMact"/>
+        <ComboBox Grid.Row="4" Grid.Column="1"
+                  Name="StartAct"/>
+
+        <Label Grid.Row="5" Grid.Column="0"
+               Content="운동 위치" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="5" Grid.Column="1"
+                  Name="ExerciseBact"/>
+        <ComboBox Grid.Row="6" Grid.Column="1"
+                  Name="ExersiceMact"/>
+        <ComboBox Grid.Row="7" Grid.Column="1"
+                  Name="ExersiceAct"/>
+
+        <Label Grid.Row="8" Grid.Column="0"
+               Content="코멘드" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="8" Grid.Column="1"/>
     </Grid>
 </Window>

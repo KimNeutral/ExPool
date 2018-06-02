@@ -23,5 +23,9 @@ namespace ExPool
         {
             InitializeComponent();
         }
+
+        private void ButtonDriver_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
