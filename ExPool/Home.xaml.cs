@@ -27,5 +27,11 @@ namespace ExPool
             App.stack = new PageStack(this);
             this.DataContext = App.stack;
         }
+
+        private void tbtnBack_Unchecked(object sender, RoutedEventArgs e)
+        {
+            tbtnBack.IsChecked = true;
+            App.stack.Pop();
+        }
     }
 }

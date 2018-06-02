@@ -51,7 +51,8 @@ namespace ExPool
         {
             CurrentPage = stack.Peek();
             _home.Frame.Content = CurrentPage;
-            _home.tbtnHamburger.IsChecked = stack.Count != 1;
+            _home.MenuToggleButton.Visibility = stack.Count == 1 ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
+            _home.tbtnBack.Visibility = stack.Count != 1 ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
