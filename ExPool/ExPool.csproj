@@ -81,7 +81,7 @@
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserProfileClass\Despartment.cs" />
+    <Compile Include="UserProfileClass\Department.cs" />
     <Compile Include="UserProfileClass\Member.cs" />
     <Compile Include="UserProfileClass\MemberViewModel.cs" />
     <Page Include="ApplicationDriver.xaml">
@@ -165,7 +165,7 @@
     <Resource Include="Image\login-background_city.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\Department_list.txt" />
+    <Folder Include="Resource\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
