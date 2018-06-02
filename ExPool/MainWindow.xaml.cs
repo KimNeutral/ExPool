@@ -39,5 +39,12 @@ namespace ExPool
             var content = response.Content;
             MessageBox.Show(content);*/
         }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            var registerWindow = new RegisterWindow();
+            registerWindow.Owner = this;
+            registerWindow.ShowDialog();
+        }
     }
 }
