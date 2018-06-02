@@ -26,7 +26,8 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top">
+        <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top"
+                             MouseUp="Card_MouseUp">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

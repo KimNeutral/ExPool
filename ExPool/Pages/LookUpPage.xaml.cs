@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExPool
+namespace ExPool.Pages
 {
     /// <summary>
-    /// Check.xaml에 대한 상호 작용 논리
+    /// Interaction logic for LookUpPage.xaml
     /// </summary>
-    public partial class Check : Window
+    public partial class LookUpPage : Page
     {
-        public Check()
+        public LookUpPage()
         {
             InitializeComponent();
         }

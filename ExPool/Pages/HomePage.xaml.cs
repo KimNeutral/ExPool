@@ -34,5 +34,10 @@ namespace ExPool.Pages
         {
             App.stack.Add(new AddPassengerPage());
         }
+
+        private void Card_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            App.stack.Add(new LookUpPage());
+        }
     }
 }

@@ -67,9 +67,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Check.xaml.cs">
-      <DependentUpon>Check.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Network\NetworkManager.cs" />
     <Compile Include="Network\TResponse.cs" />
     <Compile Include="PageStack.cs" />
@@ -82,16 +79,15 @@
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LookUpPage.xaml.cs">
+      <DependentUpon>LookUpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserProfileClass\Department.cs" />
     <Compile Include="UserProfileClass\Member.cs" />
     <Compile Include="UserProfileClass\MemberViewModel.cs" />
-    <Page Include="Check.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LookUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

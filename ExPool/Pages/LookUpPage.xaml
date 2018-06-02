@@ -1,0 +1,88 @@
+﻿<Page x:Class="ExPool.Pages.LookUpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExPool.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      Title="LookUpPage"
+      d:DesignHeight="700" d:DesignWidth="400"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal" 
+      TextOptions.TextRenderingMode="Auto">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.30*"/>
+                <ColumnDefinition Width="0.25*"/>
+                <ColumnDefinition Width="0.30*"/>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" 
+                    HorizontalAlignment="Right"
+                    Margin="0 0 20 0"
+                    Background="White" BorderBrush="White"
+                    Foreground="Black">
+                <materialDesign:PackIcon Kind="Phone" Height="20" Width="20" />
+            </Button>
+            <Ellipse Grid.Column="1"
+                     Height="{Binding ActualWidth, RelativeSource={RelativeSource Self}}">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="http://hezway.ipower.com/poolsafeinc/wp-content/uploads/2017/06/profile.png"
+                                Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button Grid.Column="2"
+                    Style="{StaticResource MaterialDesignFloatingActionDarkButton}" 
+                    HorizontalAlignment="Left"
+                    Margin="20 0 0 0"
+                    Background="White" BorderBrush="White"
+                    Foreground="Black">
+                <materialDesign:PackIcon Kind="Message" Height="20" Width="20" />
+            </Button>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Margin="5 5 5 15">
+            <Label
+               Content="김대용 / 19세" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0"/>
+            <Border Background="#F2DA01" HorizontalAlignment="Center" BorderBrush="#E1CD30" BorderThickness="2">
+                <TextBlock HorizontalAlignment="Center" Padding="5" FontSize="15">
+                <Run>서울 12가</Run> <Run FontWeight="Bold">2456</Run>
+                </TextBlock>
+            </Border>
+        </StackPanel>
+
+        <Label Grid.Row="2"
+               Content="공지사항" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Grid.Row="3"
+               Content="주소" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Rectangle Grid.Row="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="https://www.harvard.edu/sites/default/files/content/harvard-map-google.jpg"
+                            Stretch="UniformToFill"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Page>
