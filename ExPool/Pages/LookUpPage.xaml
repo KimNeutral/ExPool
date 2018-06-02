@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       Title="LookUpPage"
       d:DesignHeight="700" d:DesignWidth="400"
-      Background="{DynamicResource MaterialDesignPaper}"
+      Background="White"
       FontFamily="{DynamicResource MaterialDesignFont}"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
       TextElement.FontWeight="Regular"
@@ -29,9 +29,38 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid>
+
+        <!--<StackPanel Orientation="Horizontal" Margin="5">
+            <Ellipse Width="25" Height="25" Stroke="OrangeRed" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="http://hezway.ipower.com/poolsafeinc/wp-content/uploads/2017/06/profile.png"
+                                Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="25" Height="25">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="http://hezway.ipower.com/poolsafeinc/wp-content/uploads/2017/06/profile.png"
+                                Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="25" Height="25">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="http://hezway.ipower.com/poolsafeinc/wp-content/uploads/2017/06/profile.png"
+                                Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="25" Height="25">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="http://hezway.ipower.com/poolsafeinc/wp-content/uploads/2017/06/profile.png"
+                                Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </StackPanel>-->
+        
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.30*"/>
                 <ColumnDefinition Width="0.25*"/>
@@ -61,7 +90,7 @@
             </Button>
         </Grid>
 
-        <StackPanel Grid.Row="1" Margin="5 5 5 15">
+        <StackPanel Grid.Row="2" Margin="5 5 5 15">
             <Label
                Content="김대용 / 19세" FontSize="20"
                VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0"/>
@@ -71,14 +100,8 @@
                 </TextBlock>
             </Border>
         </StackPanel>
-
-        <Label Grid.Row="2"
-               Content="공지사항" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Label Grid.Row="3"
-               Content="주소" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Rectangle Grid.Row="4">
+        
+        <Rectangle Grid.Row="3">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="https://www.harvard.edu/sites/default/files/content/harvard-map-google.jpg"
                             Stretch="UniformToFill"></ImageBrush>
