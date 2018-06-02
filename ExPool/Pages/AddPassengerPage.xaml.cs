@@ -59,5 +59,10 @@ namespace ExPool.Pages
                 StartMact.Items.Add("안산시 상록구");
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.stack.Pop();
+        }
     }
 }

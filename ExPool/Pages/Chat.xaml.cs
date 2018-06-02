@@ -10,7 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Winsdows.Shapes;
+using System.Windows.Shapes;
 
 namespace ExPool.Pages
 {
@@ -22,6 +22,8 @@ namespace ExPool.Pages
         public Chat()
         {
             InitializeComponent();
+            ChatRecord.Items.Add(newChat.Text);
+            newChat.Text = null;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
