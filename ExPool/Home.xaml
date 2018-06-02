@@ -44,7 +44,7 @@
         <Grid Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"
               Margin="30">
             <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" FocusVisualStyle="{x:Null}"
-                    Content="&#x26DF;" Foreground="White" FontSize="30"/>
+                    Content="&#x26DF;" Foreground="White" FontSize="30" HorizontalAlignment="Right"/>
         </Grid>
     </Grid>
 </Window>
