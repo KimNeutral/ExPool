@@ -29,7 +29,7 @@
         <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
             <materialDesign:DrawerHost.LeftDrawerContent>
                 <DockPanel MinWidth="212">
-                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                    <ToggleButton x:Name="tbtnHamburger" Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
                                     DockPanel.Dock="Top"
                                     HorizontalAlignment="Right" Margin="16"
                                     IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
@@ -52,7 +52,7 @@
                         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="15 0 0 0">ExPool</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <Frame Content="{Binding Path=CurrentPage}"
+                <Frame x:Name="Frame" Content="{Binding Path=CurrentPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                        NavigationUIVisibility="Hidden">
                 </Frame>
             </DockPanel>
