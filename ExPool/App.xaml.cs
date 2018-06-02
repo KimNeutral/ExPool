@@ -14,4 +14,12 @@ namespace ExPool
     public partial class App : Application
     {
     }
+
+    public class Profile
+    {
+        public String UserName { get; set; }
+        public int Age { get; set; }
+        public String Location { get; set; }
+        public String Exercise { get; set; }
+    }
 }
