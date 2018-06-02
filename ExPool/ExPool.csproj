@@ -85,6 +85,13 @@
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfileClass\Despartment.cs" />
+    <Compile Include="UserProfileClass\Member.cs" />
+    <Compile Include="UserProfileClass\MemberViewModel.cs" />
+    <Page Include="ApplicationDriver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ApplicationFirst.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\login-background_city.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Department_list.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
