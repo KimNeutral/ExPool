@@ -17,7 +17,7 @@
       Title="AddPassengerPage">
 
     <Grid>
-        <materialDesign:Card Padding="16" Margin="8">
+        <materialDesign:Card Padding="16" Margin="8,8,8,0" Height="316">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -36,7 +36,7 @@
                     <ComboBoxItem>배드민턴</ComboBoxItem>
                 </ComboBox>
 
-                <ComboBox Grid.Row="1" Grid.Column="1" materialDesign:HintAssist.Hint="시간대">
+                <ComboBox Grid.Row="1" materialDesign:HintAssist.Hint="시간대" Margin="0,21.5,0,29.5" Grid.RowSpan="2">
                     <ComboBoxItem>00:00</ComboBoxItem>
                     <ComboBoxItem>01:00</ComboBoxItem>
                     <ComboBoxItem>02:00</ComboBoxItem>
@@ -63,8 +63,8 @@
                     <ComboBoxItem>23:00</ComboBoxItem>
                 </ComboBox>
 
-                <ComboBox Grid.Row="2" Grid.Column="1" materialDesign:HintAssist.Hint="출발 시도"
-                  Name="StartBact" SelectionChanged="StartBact_SelectionChanged">
+                <ComboBox Grid.Row="3" materialDesign:HintAssist.Hint="출발 시도"
+                  Name="StartBact" SelectionChanged="StartBact_SelectionChanged" Margin="0,0.5,0,12">
                     <ComboBoxItem>서울특별시</ComboBoxItem>
                     <ComboBoxItem>부산광역시</ComboBoxItem>
                     <ComboBoxItem>인천광역시</ComboBoxItem>
@@ -83,10 +83,10 @@
                     <ComboBoxItem>경상남도</ComboBoxItem>
                     <ComboBoxItem>제주특별자치도</ComboBoxItem>
                 </ComboBox>
-                <ComboBox Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="출발 구"
-                  Name="StartMact"/>
+                <ComboBox Grid.Row="4" materialDesign:HintAssist.Hint="출발 구"
+                  Name="StartMact" Margin="0,22,0,29.5" Grid.RowSpan="2"/>
 
-                <Button Grid.Row="4" Content="매칭" Margin="0 10 0 0" Click="Button_Click">
+                <Button Grid.Row="5" Content="매칭" Margin="0,36.5,0,0" Click="Button_Click" Grid.RowSpan="2" Height="Auto">
                 </Button>
             </Grid>
         </materialDesign:Card>
