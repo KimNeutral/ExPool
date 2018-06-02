@@ -48,7 +48,7 @@
                             Margin="32" Grid.Row="1">
                 <StackPanel>
                     <Button x:Name="btnDriver"
-                            ToolTip="드라이버"
+                            ToolTip="채팅"
                             Background="{DynamicResource PrimaryHueMidBrush}"
                             Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                             Click="btnDriver_Click">

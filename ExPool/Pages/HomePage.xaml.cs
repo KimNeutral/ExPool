@@ -23,6 +23,9 @@ namespace ExPool.Pages
         public HomePage()
         {
             InitializeComponent();
+            if (App.pageswitch) {
+                App.stack.Add(new HomePage2());
+            }
         }
 
         private void btnDriver_Click(object sender, RoutedEventArgs e)
