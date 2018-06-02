@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
+using RestSharp;
 
 namespace ExPool
 {
@@ -27,7 +28,7 @@ namespace ExPool
         /*private string Request_Json()
         {
             string result = null;
-            string url = "hhttp://expool-env.pns7m3byyt.us-east-2.elasticbeanstalk.com/auth";
+            string url = "http://192.168.43.47:8080/auth";
             //Console.WriteLine("url : " + url);
 
             try
@@ -54,7 +55,11 @@ namespace ExPool
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Request_Json();
+            var client = new RestClient("http://192.168.43.47:8080");
+            var request = new RestRequest("auth", Method.GET);
+            IRestResponse response = client.Execute(request);
+            var content = response.Content;
+            MessageBox.Show(content);
         }
     }
 }
