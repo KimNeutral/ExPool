@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using UserProfile.Model;
 
 namespace ExPool
 {
@@ -14,13 +15,7 @@ namespace ExPool
     public partial class App : Application
     {
         public static PageStack stack;
-    }
 
-    public class Profile
-    {
-        public String UserName { get; set; }
-        public int Age { get; set; }
-        public String Location { get; set; }
-        public String Exercise { get; set; }
+        public static User myprofile { get; set; }
     }
 }
