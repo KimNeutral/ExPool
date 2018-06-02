@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using UserProfile.Model;
 using ExPool;
+using UserProfile.Exercise;
 
 namespace UserProfile.ViewModel
 {
@@ -22,11 +23,13 @@ namespace UserProfile.ViewModel
 
         public List<User> Items { get; } = new List<User>();
 
-        private List<Department> _departments = null;
+ /*       private List<Department> _departments = null;
         public List<Department> Departments
         {
             get => _departments;
-        }
+        }*/
+
+        public List<Department> Departments { get; set; }
 
         private bool IsDataLoaded { get; set; }
 
@@ -35,11 +38,11 @@ namespace UserProfile.ViewModel
             // You must lock the collection when modifying it from another thread.
             BindingOperations.EnableCollectionSynchronization(Items, _lock);
         }
-
+/*        
         public void SetDeaprtments(List<Department> departments)
         {
             _departments = departments;
-        }
+        }*/
 
 /*        public void LoadDummyData()
         {

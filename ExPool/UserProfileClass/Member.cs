@@ -76,13 +76,14 @@ namespace UserProfile.Model
             }
             set
             {
-                departmentIdx = value;
+                if(value >0 && value <=4)
+                    departmentIdx = value;
                 //TO DO : 부서 구분
 
-                //4 : design team 1
-                //3 : mobile team 2
-                //1 : server team 3 
-                //2 : window team 4
+                // 1 : 축구
+                // 2 : 농구
+                // 3 : 탁구
+                // 4 : 배드민턴
 
                 //department = App.dicDepartment[departmentIdx];
                 NotifyPropertyChanged("Department");
