@@ -51,7 +51,7 @@ namespace ExPool.Network
         /// <param name="urlSegments">UrlSegement</param>
         /// <param name="headers">Header</param>
         /// <returns></returns>
-        public static RestRequest AddToRequest(RestRequest restRequest,string json = null, UrlSegment[] urlSegments = null, Header[] headers = null)
+        private static RestRequest AddToRequest(RestRequest restRequest,string json = null, UrlSegment[] urlSegments = null, Header[] headers = null)
         {
             if (urlSegments != null)
             {
