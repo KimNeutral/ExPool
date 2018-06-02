@@ -33,5 +33,11 @@
             <ComboBoxItem>탁구</ComboBoxItem>
             <ComboBoxItem>배드민턴</ComboBoxItem>
         </ComboBox>
+
+        <Label Grid.Row="1" Grid.Column="0"
+               Content="시간" FontSize="20"
+               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="1" Grid.Column="1">
+        </ComboBox>
     </Grid>
 </Window>
