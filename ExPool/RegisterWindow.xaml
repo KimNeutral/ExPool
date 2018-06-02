@@ -44,15 +44,15 @@
 
                 <Grid Grid.Row="1">
                     <StackPanel>
-                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0" Name="signUpId"
                         FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="아이디"/>
-                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0" Name="signUpName"
                         FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="이름"/>
-                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0" Name="signUpEmail"
                         FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="이메일"/>
-                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0" Name="signUpPhone"
                         FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="휴대전화"/>
-                        <PasswordBox Grid.Row="1" Grid.Column="0" Margin="0 10 0 0"
+                        <PasswordBox Grid.Row="1" Grid.Column="0" Margin="0 10 0 0" Name="signUpPass"
                         FontSize="15" materialDesign:HintAssist.Hint="비밀번호"/>
                         <Button Content="등록" Margin="0 20 0 0"
                              Click="Button_Click"/>
