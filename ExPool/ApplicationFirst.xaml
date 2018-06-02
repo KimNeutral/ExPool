@@ -19,9 +19,10 @@
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="30"
                FontWeight="Bold" Content="ExPool"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Row="1" Grid.Column="0"
+        <Button Grid.Row="1" Grid.Column="0" x:Name="ButtonDriver"
                 Content="드라이버" FontSize="30"
-                Margin="20,120,20,120"/>
+                Margin="20,120,20,120"
+                Click="ButtonDriver_Click"/>
         <Button Grid.Row="1" Grid.Column="1"
                 Content="탑승자" FontSize="30"
                 Margin="20,120,20,120"/>
