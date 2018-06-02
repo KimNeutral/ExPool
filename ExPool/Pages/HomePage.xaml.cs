@@ -24,5 +24,15 @@ namespace ExPool.Pages
         {
             InitializeComponent();
         }
+
+        private void btnDriver_Click(object sender, RoutedEventArgs e)
+        {
+            App.stack.Add(new AddDriverPage());
+        }
+
+        private void btnPassenger_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

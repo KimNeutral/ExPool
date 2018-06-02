@@ -13,6 +13,7 @@ namespace ExPool
     /// </summary>
     public partial class App : Application
     {
+        public static PageStack stack;
     }
 
     public class Profile
