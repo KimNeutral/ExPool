@@ -88,10 +88,6 @@
     <Compile Include="UserProfileClass\Department.cs" />
     <Compile Include="UserProfileClass\Member.cs" />
     <Compile Include="UserProfileClass\MemberViewModel.cs" />
-    <Page Include="ApplicationFirst.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ApplicationPassenger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,9 +107,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ApplicationFirst.xaml.cs">
-      <DependentUpon>ApplicationFirst.xaml</DependentUpon>
     </Compile>
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
