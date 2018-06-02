@@ -23,7 +23,7 @@ namespace UserProfile.Model
 		private string pw;
         private string name;
         private int departmentIdx;
-        private string department;
+        private string departments;
 		private string profileImage;
         private int age;
         private string location;
@@ -89,12 +89,12 @@ namespace UserProfile.Model
                 NotifyPropertyChanged("Department");
             }
         }
-        public string Department
+        public string Departments
         {
             get
             {
-                var item = Departments.FirstOrDefault(x => x.Idx == departmentIdx);
-                return item?.Name;
+                Department dp = new Department();
+                return dp.Get_Department(departmentIdx);
             }
         }
         

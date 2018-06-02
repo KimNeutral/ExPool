@@ -22,13 +22,13 @@ namespace UserProfile.Exercise
             }
         }
 
-        public String Get_Department()
+        public String Get_Department(int dpid)
         {
             // 1 : 축구
             // 2 : 농구
             // 3 : 탁구
             // 4 : 배드민턴
-            switch(this.department_id){
+            switch(dpid){
                 case 1: return "축구";
                 case 2: return "농구";
                 case 3: return "탁구";

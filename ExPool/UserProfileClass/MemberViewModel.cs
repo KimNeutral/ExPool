@@ -29,8 +29,6 @@ namespace UserProfile.ViewModel
             get => _departments;
         }*/
 
-        public List<Department> Departments { get; set; }
-
         private bool IsDataLoaded { get; set; }
 
         public UserViewModel()
