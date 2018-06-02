@@ -23,5 +23,75 @@ namespace ExPool
         {
             InitializeComponent();
         }
+
+        private void StartBact_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(StartBact.SelectedIndex==0)
+            {
+                StartMact.Items.Clear();
+                StartMact.Items.Add("종로구");
+                StartMact.Items.Add("종구");
+                StartMact.Items.Add("용산구");
+                StartMact.Items.Add("성동구");
+                StartMact.Items.Add("광진구");
+                StartMact.Items.Add("동대문구");
+                StartMact.Items.Add("중량구");
+                StartMact.Items.Add("성복구");
+                StartMact.Items.Add("강북구");
+                StartMact.Items.Add("도봉구");
+                StartMact.Items.Add("노원구");
+                StartMact.Items.Add("은평구");
+            }
+            else if(StartBact.SelectedIndex == 8)
+            {
+                StartMact.Items.Clear();
+                StartMact.Items.Add("수원시 장안구");
+                StartMact.Items.Add("수원시 권선구");
+                StartMact.Items.Add("수원시 팔달구");
+                StartMact.Items.Add("수원시 영통구");
+                StartMact.Items.Add("성남시 수정구");
+                StartMact.Items.Add("성남시 중원구");
+                StartMact.Items.Add("성남시 분당구");
+                StartMact.Items.Add("안양시 만안구");
+                StartMact.Items.Add("안양시 동안구");
+                StartMact.Items.Add("안산시 단원구");
+                StartMact.Items.Add("안산시 상록구");
+            }
+        }
+
+        private void ExerciseBact_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ExerciseBact.SelectedIndex == 0)
+            {
+                ExerciseMact.Items.Clear();
+                ExerciseMact.Items.Add("종로구");
+                ExerciseMact.Items.Add("종구");
+                ExerciseMact.Items.Add("용산구");
+                ExerciseMact.Items.Add("성동구");
+                ExerciseMact.Items.Add("광진구");
+                ExerciseMact.Items.Add("동대문구");
+                ExerciseMact.Items.Add("중량구");
+                ExerciseMact.Items.Add("성복구");
+                ExerciseMact.Items.Add("강북구");
+                ExerciseMact.Items.Add("도봉구");
+                ExerciseMact.Items.Add("노원구");
+                ExerciseMact.Items.Add("은평구");
+            }
+            else if (ExerciseBact.SelectedIndex == 8)
+            {
+                ExerciseMact.Items.Clear();
+                ExerciseMact.Items.Add("수원시 장안구");
+                ExerciseMact.Items.Add("수원시 권선구");
+                ExerciseMact.Items.Add("수원시 팔달구");
+                ExerciseMact.Items.Add("수원시 영통구");
+                ExerciseMact.Items.Add("성남시 수정구");
+                ExerciseMact.Items.Add("성남시 중원구");
+                ExerciseMact.Items.Add("성남시 분당구");
+                ExerciseMact.Items.Add("안양시 만안구");
+                ExerciseMact.Items.Add("안양시 동안구");
+                ExerciseMact.Items.Add("안산시 단원구");
+                ExerciseMact.Items.Add("안산시 상록구");
+            }
+        }
     }
 }
