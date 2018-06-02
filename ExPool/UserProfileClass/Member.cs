@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ExPool;
+using UserProfile.Exercise;
 
 namespace UserProfile.Model
 {
@@ -91,7 +92,7 @@ namespace UserProfile.Model
         {
             get
             {
-                var item = App.UserViewModel.Departments.FirstOrDefault(x => x.Idx == departmentIdx);
+                var item = Departments.FirstOrDefault(x => x.Idx == departmentIdx);
                 return item?.Name;
             }
         }

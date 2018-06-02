@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExPool.UserProfileClass
+namespace UserProfile.Exercise
 {
-    class Despartment
+    class Department
     {
-        
+        public int 
+        {
+
+        }
     }
 }
