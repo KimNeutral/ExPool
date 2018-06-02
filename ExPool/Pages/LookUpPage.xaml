@@ -69,7 +69,7 @@
             <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" 
                     HorizontalAlignment="Right"
                     Margin="0 0 20 0"
-                    Background="White" BorderBrush="White"
+                    Background="White" BorderBrush="White" Click="Button_Click"
                     Foreground="Black">
                 <materialDesign:PackIcon Kind="Phone" Height="20" Width="20" />
             </Button>
@@ -84,7 +84,7 @@
                     Style="{StaticResource MaterialDesignFloatingActionDarkButton}" 
                     HorizontalAlignment="Left"
                     Margin="20 0 0 0"
-                    Background="White" BorderBrush="White"
+                    Background="White" BorderBrush="White" Click="Button_Click_1"
                     Foreground="Black">
                 <materialDesign:PackIcon Kind="Message" Height="20" Width="20" />
             </Button>

@@ -24,5 +24,16 @@ namespace ExPool.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText("01012345678");
+            MessageBox.Show("전화번호가 복사되었습니다.","System");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
