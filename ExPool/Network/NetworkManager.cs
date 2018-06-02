@@ -20,7 +20,7 @@ namespace ExPool.Network
         /// RestClient를 만듭니다.
         /// </summary>
         /// <returns>RestClient</returns>
-        private static RestClient CreateClient()
+        public static RestClient CreateClient()
         {
             var restClient = new RestClient(SERVER_URL) {Timeout = TIME_OUT};
             return restClient;
@@ -35,7 +35,7 @@ namespace ExPool.Network
         /// <param name="urlSegments">기본 null. url파라미터</param>
         /// <param name="headers">기본 null. 헤더</param>
         /// <returns>RestRequest</returns>
-        private static RestRequest CreateRequest(string resource, Method method, string parameterJson, UrlSegment[] urlSegments = null, Header[] headers = null)
+        public static RestRequest CreateRequest(string resource, Method method, string parameterJson, UrlSegment[] urlSegments = null, Header[] headers = null)
         {
             var restRequest = new RestRequest(resource, method) { Timeout = TIME_OUT };
             restRequest = AddToRequest(restRequest, parameterJson, urlSegments, headers);
@@ -51,7 +51,7 @@ namespace ExPool.Network
         /// <param name="urlSegments">UrlSegement</param>
         /// <param name="headers">Header</param>
         /// <returns></returns>
-        private static RestRequest AddToRequest(RestRequest restRequest,string json = null, UrlSegment[] urlSegments = null, Header[] headers = null)
+        public static RestRequest AddToRequest(RestRequest restRequest,string json = null, UrlSegment[] urlSegments = null, Header[] headers = null)
         {
             if (urlSegments != null)
             {
@@ -84,7 +84,7 @@ namespace ExPool.Network
         /// <typeparam name="T">반환 형태</typeparam>
         /// <param name="json">목표 Json</param>
         /// <returns>역직렬화된 Json</returns>
-        private static T DeserializeSnakeCase<T>(string json)
+        public static T DeserializeSnakeCase<T>(string json)
         {
             DefaultContractResolver contractResolver = new DefaultContractResolver
             {
@@ -119,7 +119,7 @@ namespace ExPool.Network
         /// <param name="urlSegments">기본 null. url파라미터</param>
         /// <param name="headers">기본 null. 헤더</param>
         /// <returns>통신후 TResponse를 반환합니다.</returns>
-        private async Task<TResponse<T>> GetResponse<T>(string resource, Method method, string parameterJson = null, UrlSegment[] urlSegments = null, Header[] headers = null)
+        public async Task<TResponse<T>> GetResponse<T>(string resource, Method method, string parameterJson = null, UrlSegment[] urlSegments = null, Header[] headers = null)
         {
             var client = CreateClient();
             var restRequest = CreateRequest(resource, method, parameterJson, urlSegments, headers);
@@ -129,7 +129,7 @@ namespace ExPool.Network
             return resp;
         }
 
-        private class UrlSegment
+        public class UrlSegment
         {
             public string Name { get; set; }
             public object Value { get; set; }
@@ -141,7 +141,7 @@ namespace ExPool.Network
             }
         }
 
-        private class Header
+        public class Header
         {
             public string Name { get; set; }
             public string Value { get; set; }

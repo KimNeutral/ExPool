@@ -57,7 +57,7 @@
 
                 <StackPanel Grid.Row="2" VerticalAlignment="Center">
                     <Button Content="로그인"
-                        Click="Button_Click"/>
+                        Click="Login_Click"/>
                     <Button x:Name="btnRegister" Style="{DynamicResource MaterialDesignFlatButton}" Grid.Column="0" Grid.ColumnSpan="2" Content="회원가입"
                         Margin="0 10 0 0" Click="btnRegister_Click"/>
                 </StackPanel>

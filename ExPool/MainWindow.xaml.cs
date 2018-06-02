@@ -16,6 +16,7 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
 using RestSharp;
+using ExPool.Network;
 
 namespace ExPool
 {
@@ -31,13 +32,16 @@ namespace ExPool
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
             /*var client = new RestClient("http://192.168.43.47:8080");
             var request = new RestRequest("auth", Method.GET);
             IRestResponse response = client.Execute(request);
             var content = response.Content;
             MessageBox.Show(content);*/
+
+            NetworkManager ntw = new NetworkManager();
+            RestClient clt = ntw.CreateClient();
 
             var home = new Home();
             home.Show();
