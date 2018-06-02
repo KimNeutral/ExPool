@@ -1,11 +1,11 @@
-﻿<Window x:Class="ExPool.ApplicationDriver"
+﻿<Window x:Class="ExPool.ApplicationPassenger"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExPool"
         mc:Ignorable="d"
-        Title="ApplicationDriver" Height="500" Width="350">
+        Title="ApplicationPassenger" Height="500" Width="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -86,36 +86,5 @@
         </ComboBox>
         <ComboBox Grid.Row="3" Grid.Column="1"
                   Name="StartMact"/>
-
-        <Label Grid.Row="4" Grid.Column="0"
-               Content="운동 위치" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <ComboBox Grid.Row="4" Grid.Column="1"
-                  Name="ExerciseBact" SelectionChanged="ExerciseBact_SelectionChanged">
-            <ComboBoxItem>서울특별시</ComboBoxItem>
-            <ComboBoxItem>부산광역시</ComboBoxItem>
-            <ComboBoxItem>인천광역시</ComboBoxItem>
-            <ComboBoxItem>대구광역시</ComboBoxItem>
-            <ComboBoxItem>광주광역시</ComboBoxItem>
-            <ComboBoxItem>대전광역시</ComboBoxItem>
-            <ComboBoxItem>울산광역시</ComboBoxItem>
-            <ComboBoxItem>세종특별자치시</ComboBoxItem>
-            <ComboBoxItem>경기도</ComboBoxItem>
-            <ComboBoxItem>강원도</ComboBoxItem>
-            <ComboBoxItem>충청북도</ComboBoxItem>
-            <ComboBoxItem>충청남도</ComboBoxItem>
-            <ComboBoxItem>전라북도</ComboBoxItem>
-            <ComboBoxItem>전라남도</ComboBoxItem>
-            <ComboBoxItem>경상북도</ComboBoxItem>
-            <ComboBoxItem>경상남도</ComboBoxItem>
-            <ComboBoxItem>제주특별자치도</ComboBoxItem>
-        </ComboBox>
-        <ComboBox Grid.Row="5" Grid.Column="1"
-                  Name="ExerciseMact"/>
-
-        <Label Grid.Row="6" Grid.Column="0"
-               Content="코멘드" FontSize="20"
-               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="6" Grid.Column="1"/>
     </Grid>
 </Window>
