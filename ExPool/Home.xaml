@@ -49,6 +49,8 @@
                     <DockPanel>
                         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
                                         x:Name="MenuToggleButton"/>
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"
+                                        x:Name="tbtnBack" IsChecked="True" Visibility="Collapsed" Unchecked="tbtnBack_Unchecked"/>
                         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Margin="15 0 0 0">ExPool</TextBlock>
                     </DockPanel>
                 </materialDesign:ColorZone>

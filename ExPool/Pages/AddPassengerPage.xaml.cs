@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExPool
+namespace ExPool.Pages
 {
     /// <summary>
-    /// ApplicationPassenger.xaml에 대한 상호 작용 논리
+    /// Interaction logic for AddPassengerPage.xaml
     /// </summary>
-    public partial class ApplicationPassenger : Window
+    public partial class AddPassengerPage : Page
     {
-        public ApplicationPassenger()
+        public AddPassengerPage()
         {
             InitializeComponent();
         }
