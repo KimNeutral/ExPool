@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ApplicationPassenger.xaml.cs">
+      <DependentUpon>ApplicationPassenger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Network\NetworkManager.cs" />
     <Compile Include="Network\TResponse.cs" />
     <Compile Include="RegisterWindow.xaml.cs">
@@ -77,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ApplicationFirst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ApplicationPassenger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
