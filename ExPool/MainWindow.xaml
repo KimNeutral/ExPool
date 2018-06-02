@@ -49,9 +49,9 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     
-                    <TextBox Grid.Row="0" Grid.Column="0"
+                    <TextBox Grid.Row="0" Grid.Column="0" Name="IdBox"
                         FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="ID"/>
-                    <PasswordBox Grid.Row="1" Grid.Column="0"
+                    <PasswordBox Grid.Row="1" Grid.Column="0" Name="PwBox"
                         FontSize="15" materialDesign:HintAssist.Hint="Password"/>
                 </Grid>
 

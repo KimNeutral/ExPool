@@ -39,9 +39,14 @@ namespace ExPool
             IRestResponse response = client.Execute(request);
             var content = response.Content;
             MessageBox.Show(content);*/
+              
+            App.myprofile.Id = IdBox.Text.ToString();
+            App.myprofile.password = PwBox.Password.ToString();
+            String json_source = "{\"" + App.myprofile.Id + "\", \"" + App.myprofile.password + "\"}";
 
-            NetworkManager ntw = new NetworkManager();
-            RestClient clt = ntw.CreateClient();
+            NetworkManager.CreateClient();
+            NetworkManager.CreateRequest("//auth//signin", Method.POST, json_source);
+
 
             var home = new Home();
             home.Show();

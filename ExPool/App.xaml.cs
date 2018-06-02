@@ -16,6 +16,6 @@ namespace ExPool
     {
         public static PageStack stack;
 
-        public static User myprofile { get; set; }
+        public static User myprofile { get; set; } = new User();
     }
 }

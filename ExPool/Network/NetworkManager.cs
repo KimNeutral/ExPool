@@ -13,7 +13,7 @@ namespace ExPool.Network
 {
     public partial class NetworkManager
     {
-        private const string SERVER_URL = "";
+        private const string SERVER_URL = "http://8.8.8.8/";
         private const int TIME_OUT = 30000;
 
         /// <summary>
