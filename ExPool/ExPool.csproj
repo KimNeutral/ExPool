@@ -78,6 +78,8 @@
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfileClass\Member.cs" />
+    <Compile Include="UserProfileClass\MemberViewModel.cs" />
     <Page Include="ApplicationDriver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
