@@ -25,29 +25,7 @@ namespace ExPool
     /// </summary>
     public partial class MainWindow : Window
     {
-        /*private string Request_Json()
-        {
-            string result = null;
-            string url = "http://192.168.43.47:8080/auth";
-            //Console.WriteLine("url : " + url);
-
-            try
-            {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                Stream stream = response.GetResponseStream();
-                StreamReader reader = new StreamReader(stream);
-                result = reader.ReadToEnd();
-                stream.Close();
-                response.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            return result;
-        }*/
+        
         public MainWindow()
         {
             InitializeComponent();
