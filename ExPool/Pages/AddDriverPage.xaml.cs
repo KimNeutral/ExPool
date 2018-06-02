@@ -10,23 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExPool
+namespace ExPool.Pages
 {
     /// <summary>
-    /// ApplicationDriver.xaml에 대한 상호 작용 논리
+    /// Interaction logic for AddDriverPage.xaml
     /// </summary>
-    public partial class ApplicationDriver : Window
+    public partial class AddDriverPage : Page
     {
-        public ApplicationDriver()
+        public AddDriverPage()
         {
             InitializeComponent();
         }
 
         private void StartBact_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(StartBact.SelectedIndex==0)
+            if (StartBact.SelectedIndex == 0)
             {
                 StartMact.Items.Clear();
                 StartMact.Items.Add("종로구");
@@ -42,7 +43,7 @@ namespace ExPool
                 StartMact.Items.Add("노원구");
                 StartMact.Items.Add("은평구");
             }
-            else if(StartBact.SelectedIndex == 8)
+            else if (StartBact.SelectedIndex == 8)
             {
                 StartMact.Items.Clear();
                 StartMact.Items.Add("수원시 장안구");
