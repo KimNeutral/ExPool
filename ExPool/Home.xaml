@@ -4,39 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExPool"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Home" Height="500" Width="350">
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Home" Height="600" Width="400"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="86"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
-
-        <Label Grid.Column="0" Grid.Row="0"
-                   Grid.ColumnSpan="2" 
-                   FontWeight="Bold" HorizontalAlignment="Center"
-                   VerticalAlignment="Center" FontSize="40"
-                   Content="ExPool"/>
-        <TextBlock Grid.Column="0" Grid.Row="1"
-                   Grid.ColumnSpan="2" FontSize="20"
-                   Text="현재 현황"/>
-        <TextBlock Grid.Column="0" Grid.Row="2"
-                   Grid.ColumnSpan="2" FontSize="20"
+        <materialDesign:ColorZone Padding="6"
+                                  Background="#2295F3"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                      DockPanel.Dock="Top">
+            <Grid Margin="16 12 12 12">
+                <TextBlock Text="ExPool" Margin="1,0,0,0" 
+                           FontSize="25" FontWeight="SemiBold"
+                           Foreground="White"/>
+            </Grid>
+        </materialDesign:ColorZone>
+        <materialDesign:Card Grid.Row="1"  Padding="16" Margin="16" VerticalAlignment="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="15"
                    VerticalAlignment="Center" Text="야구/송파구"/>
-        <TextBlock Grid.Column="1" Grid.Row="2"
-                   Grid.ColumnSpan="2" FontSize="20"
-                   VerticalAlignment="Center" Text="진행중"
-                   Background="Aqua" />
-        <Button Grid.Column="0" Grid.Row="5"
-                Grid.ColumnSpan="2" FontSize="20"
-                Margin="50,20,50,20" Content="매칭"/>
+                <Grid Grid.Column="1" HorizontalAlignment="Right">
+                    <TextBlock FontSize="15" Grid.Column="1"
+                               VerticalAlignment="Center" Text="진행중"
+                               Foreground="DodgerBlue"/>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+
+        <Grid Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+              Margin="30">
+            <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" FocusVisualStyle="{x:Null}"
+                    Content="&#x26DF;" Foreground="White" FontSize="30"/>
+        </Grid>
     </Grid>
 </Window>
