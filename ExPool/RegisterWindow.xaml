@@ -1,4 +1,4 @@
-﻿<Window x:Class="ExPool.MainWindow"
+﻿<Window x:Class="ExPool.RegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:ExPool"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="500"
-        WindowStartupLocation="CenterScreen"
+        Title="Register" Height="600" Width="400"
+        WindowStartupLocation="CenterOwner"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}">
     <Window.Resources>
@@ -34,37 +34,34 @@
             </Grid>
         </Grid>
 
-        <materialDesign:Card Width="350" Height="350" Padding="32" Margin="16" VerticalAlignment="Center">
+        <materialDesign:Card Width="350" Padding="32" Margin="16" VerticalAlignment="Center">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
-                    <RowDefinition Height="100"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="30">ExPool</TextBlock>
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="30">회원가입</TextBlock>
 
                 <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="아이디"/>
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="이름"/>
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="이메일"/>
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="0 10 0 0"
+                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="휴대전화"/>
+                        <PasswordBox Grid.Row="1" Grid.Column="0" Margin="0 10 0 0"
+                        FontSize="15" materialDesign:HintAssist.Hint="비밀번호"/>
+                        <Button Content="등록" Margin="0 20 0 0"
+                             Click="Button_Click"/>
+                    </StackPanel>
                     
-                    <TextBox Grid.Row="0" Grid.Column="0"
-                        FontSize="15" TextWrapping="Wrap" materialDesign:HintAssist.Hint="ID"/>
-                    <PasswordBox Grid.Row="1" Grid.Column="0"
-                        FontSize="15" materialDesign:HintAssist.Hint="Password"/>
                 </Grid>
-
-                <StackPanel Grid.Row="2" VerticalAlignment="Center">
-                    <Button Content="로그인"
-                        Click="Button_Click"/>
-                    <Button x:Name="btnRegister" Style="{DynamicResource MaterialDesignFlatButton}" Grid.Column="0" Grid.ColumnSpan="2" Content="회원가입"
-                        Margin="0 10 0 0" Click="btnRegister_Click"/>
-                </StackPanel>
-                
             </Grid>
         </materialDesign:Card>
 
     </Grid>
-    
+
 </Window>
